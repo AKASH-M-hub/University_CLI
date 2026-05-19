@@ -95,6 +95,18 @@ public class UniversityExamSystem {
 
         System.out.println("Course Added");
     }
+    static void viewStudents() {
+
+        System.out.println("\nSTUDENT LIST");
+
+        for(Student s : students) {
+
+            System.out.println(
+            "ID : " + s.id +
+            " Name : " + s.name
+            );
+        }
+}
 
     static void createExam() {
 
@@ -278,6 +290,8 @@ public class UniversityExamSystem {
 
             System.out.println(
             "7 Exit");
+            System.out.println(
+            "8 View Students");
 
             int ch=sc.nextInt();
 
@@ -309,6 +323,9 @@ public class UniversityExamSystem {
 
                 case 7:
                     System.exit(0);
+                case 8:
+                    viewStudents();
+                    break;
 
                 default:
                     System.out.println(
